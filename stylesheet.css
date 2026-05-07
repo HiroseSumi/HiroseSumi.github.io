@@ -1,0 +1,90 @@
+/* 全体の背景 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* メインカード */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    width: 90%;
+    max-width: 380px;
+    padding: 40px 20px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.intro {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 70%;
+    padding: 15px;
+    font-size: 2rem;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    outline: none;
+    letter-spacing: 10px;
+    text-indent: 10px;
+}
+
+button {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+button:hover { background: #2980b9; }
+
+#log {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 180px;
+    overflow-y: auto;
+    background: #fbfcfd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.log-item {
+    padding: 8px;
+    border-bottom: 1px solid #edf2f7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hit { color: #e74c3c; font-weight: bold; }
+.blow { color: #f1c40f; font-weight: bold; }
+
+.reset-btn {
+    margin-top: 25px;
+    background: none;
+    color: #95a5a6;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    width: auto;
+}
