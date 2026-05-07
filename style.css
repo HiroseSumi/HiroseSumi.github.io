@@ -1,90 +1,120 @@
-/* 全体の背景 */
+/* --- Progate風の親しみやすいデザイン --- */
+
+/* 全体の基本設定 */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  margin: 0;
+  font-family: "Lucida Grande", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  background-color: #f2f2f2; /* 薄いグレーの背景 */
+  color: #333;
 }
 
-/* メインカード */
-.card {
-    background: rgba(255, 255, 255, 0.95);
-    width: 90%;
-    max-width: 380px;
-    padding: 40px 20px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    text-align: center;
+/* ヘッダー：濃いグレーで引き締める */
+header {
+  height: 65px;
+  width: 100%;
+  background-color: #2f5167; /* Progate風の落ち着いた紺色 */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* メイン部分の余白 */
+.main {
+  padding: 60px 20px;
+}
+
+/* 白いカードのようなコンテナ */
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 h1 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 8px;
+  color: #5d627b;
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
-.intro {
-    font-size: 0.85rem;
-    color: #7f8c8d;
-    margin-bottom: 30px;
+p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 30px;
 }
 
+/* 入力欄：Progateの演習風 */
 input {
-    width: 70%;
-    padding: 15px;
-    font-size: 2rem;
-    border: 2px solid #edf2f7;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    background: #f8fafc;
-    outline: none;
-    letter-spacing: 10px;
-    text-indent: 10px;
+  width: 100%;
+  max-width: 200px;
+  padding: 15px;
+  font-size: 28px;
+  margin-bottom: 25px;
+  border: 2px solid #dee7ec;
+  border-radius: 4px;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s;
 }
 
-button {
-    width: 80%;
-    padding: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    transition: 0.3s;
+input:focus {
+  border-color: #239b76;
 }
 
-button:hover { background: #2980b9; }
+/* ボタン：Progateカラーの緑色 */
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  color: white;
+  background-color: #239b76; /* Progateでおなじみの緑 */
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px #1b7a5d; /* 立体感 */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn:active {
+  position: relative;
+  top: 5px; /* 押した時に沈む演出 */
+  box-shadow: none;
+}
+
+/* メッセージと履歴 */
+#message {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 16px;
+}
 
 #log {
-    margin-top: 20px;
-    text-align: left;
-    max-height: 180px;
-    overflow-y: auto;
-    background: #fbfcfd;
-    padding: 10px;
-    border-radius: 8px;
+  margin-top: 30px;
+  text-align: left;
+  border-top: 2px solid #eee;
+  padding-top: 15px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .log-item {
-    padding: 8px;
-    border-bottom: 1px solid #edf2f7;
-    display: flex;
-    justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace; /* 数字を見やすく */
 }
 
-.hit { color: #e74c3c; font-weight: bold; }
-.blow { color: #f1c40f; font-weight: bold; }
-
-.reset-btn {
-    margin-top: 25px;
-    background: none;
-    color: #95a5a6;
-    font-size: 0.8rem;
-    text-decoration: underline;
-    width: auto;
+.log-item span:last-child {
+  font-weight: bold;
+  color: #239b76;
 }
