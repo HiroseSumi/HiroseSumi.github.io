@@ -1,120 +1,84 @@
-/* --- Progate風の親しみやすいデザイン --- */
-
-/* 全体の基本設定 */
+/* 全体の設定 */
 body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
   margin: 0;
-  font-family: "Lucida Grande", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
-  background-color: #f2f2f2; /* 薄いグレーの背景 */
-  color: #333;
 }
 
-/* ヘッダー：濃いグレーで引き締める */
-header {
-  height: 65px;
-  width: 100%;
-  background-color: #2f5167; /* Progate風の落ち着いた紺色 */
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.header-logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* メイン部分の余白 */
-.main {
-  padding: 60px 20px;
-}
-
-/* 白いカードのようなコンテナ */
+/* 白い枠（コンテナ） */
 .container {
-  max-width: 450px;
+  max-width: 400px;
   margin: 0 auto;
-  background-color: white;
-  border-radius: 8px;
-  padding: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-h1 {
-  color: #5d627b;
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-p {
-  color: #888;
-  font-size: 14px;
-  margin-bottom: 30px;
-}
-
-/* 入力欄：Progateの演習風 */
+/* 入力欄：大きく中央に */
 input {
-  width: 100%;
-  max-width: 200px;
-  padding: 15px;
-  font-size: 28px;
-  margin-bottom: 25px;
-  border: 2px solid #dee7ec;
-  border-radius: 4px;
+  width: 150px;
+  padding: 10px;
+  font-size: 1.5rem;
   text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
   outline: none;
-  transition: all 0.3s;
 }
 
 input:focus {
-  border-color: #239b76;
+  border-color: #007bff;
 }
 
-/* ボタン：Progateカラーの緑色 */
-.btn {
-  display: inline-block;
-  padding: 15px 40px;
-  color: white;
-  background-color: #239b76; /* Progateでおなじみの緑 */
-  border-radius: 4px;
+/* 青いボタン */
+button {
+  padding: 10px 25px;
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 5px #1b7a5d; /* 立体感 */
-  font-weight: bold;
-  font-size: 18px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.2s;
 }
 
-.btn:active {
-  position: relative;
-  top: 5px; /* 押した時に沈む演出 */
-  box-shadow: none;
+button:hover {
+  background: #0056b3;
 }
 
-/* メッセージと履歴 */
+/* メッセージ表示 */
 #message {
-  margin-top: 30px;
+  margin: 20px 0;
   font-weight: bold;
-  font-size: 16px;
 }
 
+/* 履歴リスト */
 #log {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: left;
-  border-top: 2px solid #eee;
-  padding-top: 15px;
   max-height: 200px;
   overflow-y: auto;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
 }
 
-.log-item {
-  padding: 10px 0;
-  border-bottom: 1px dashed #ddd;
-  display: flex;
-  justify-content: space-between;
-  font-family: monospace; /* 数字を見やすく */
-}
-
-.log-item span:last-child {
+/* HitとBlowの色分け */
+.hit {
+  color: #e83e8c; /* ピンク寄りの赤 */
   font-weight: bold;
-  color: #239b76;
+}
+
+.blow {
+  color: #007bff; /* 青 */
+  font-weight: bold;
+}
+
+/* リセットボタン（グレー） */
+.reset-btn {
+  margin-top: 20px;
+  background: #6c757d;
+  font-size: 0.8rem;
 }
